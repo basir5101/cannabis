@@ -1,4 +1,12 @@
 import React from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 const features = [
   {
@@ -35,25 +43,51 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="p-6 bg-white">
-      <h2 className="text-center text-2xl font-semibold  lg:text-4xl my-8">
-        Discover Powerful Features Tailored for You
-      </h2>
-      <div className="container mx-auto grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="feature-item p-4 shadow-md rounded border border-secondary"
-          >
-            <img
-              src={feature.image}
-              alt={feature.title}
-              className="rounded-md mb-4"
-            />
-            <h3 className="text-xl font-bold">{feature.title}</h3>
-            <p>{feature.description}</p>
-          </div>
-        ))}
+    <section id="features" className="p-6 bg-black text-white mx-auto">
+      <div className="max-w-7xl m-auto">
+        <div className="flex justify-center">
+          {" "}
+          <h2 className="title h-40">
+            Discover Powerful Features Tailored for You
+          </h2>
+        </div>
+
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={2}
+          navigation
+          breakpoints={{
+            300: { slidesPerView: 1 },
+            768: { slidesPerView: 2, spaceBetween: 30 },
+            1024: { slidesPerView: 2, spaceBetween: 40 },
+          }}
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
+        >
+          {features.map((feature, index) => (
+            <SwiperSlide
+              key={index}
+              className="p-4 shadow-md rounded border border-gray-600 bg-gradient-to-r from-gray-800 to-purple-800 mb-8"
+            >
+              <div className="lg:flex justify-center items-center text-center">
+                <div className="lg:w-1/2 mr-8">
+                  <h3 className="text-2xl lg:h-20  mb-6  font-bold max-w-[800px] lg:max-w-[1000px] mt-6 text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-purple-300">
+                    {feature.title}
+                  </h3>
+                  <p className="mb-3">{feature.description}</p>
+                </div>
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  className="rounded-md mb-4 lg:w-1/2"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );

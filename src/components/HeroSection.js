@@ -9,7 +9,7 @@ const HeroSection = () => {
         backgroundPosition: "center",
         position: "relative",
       }}
-      className="hero"
+      className="hero min-h-screen flex items-center justify-center"
     >
       {/* Overlay */}
       <div
@@ -19,39 +19,35 @@ const HeroSection = () => {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundColor: "rgba(0, 0, 0, 0.7)", // Adjust opacity as needed
+          backgroundColor: "rgba(0, 0, 0, 0.8)", // Adjust opacity as needed
           zIndex: 1,
+          width: "100%",
         }}
       ></div>
 
       {/* Content */}
       <div
-        className="container mx-auto px-6 py-10 text-center"
+        className="container mx-auto px-6 text-center flex flex-col justify-center items-center"
         style={{ position: "relative", zIndex: 2 }}
       >
-        <h1
-          data-aos="fade-right"
-          className="text-2xl md:text-4xl font-bold text-white"
-        >
+        <h1 data-aos="fade-right" className="title">
           Experience Seamless Cannabis Shopping with Bitcoin
         </h1>
-        <p data-aos="fade-left" className="mt-4 text-white font-semibold">
-          Discover a hassle-free way to find and shop at cannabis dispensaries
-          accepting Bitcoin.
+        <p
+          data-aos="fade-left"
+          className="mt-4 text-white max-w-[900px] text-center text-lg font-semibold"
+        >
+          Discover a hassle-free way to find and shop at cannabis dispensaries.
+          Our app connects you to stores that accept Bitcoin and Lightning
+          Network payments, ensuring privacy and eliminating traditional fees.
         </p>
-        <div data-aos="fade-up" className="flex justify-center gap-4 mt-6">
-          <button class="rounded-md px-3.5 bg-blue-100 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-primary text-primary ">
-            <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-primary top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-            <span class="relative text-primary transition duration-300 group-hover:text-white ease">
-              Download on iOS
-            </span>
-          </button>
-          <button class="rounded-md px-3.5 bg-black text-secondary py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-black">
-            <span class="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-secondary top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-            <span class="relative text-secondary transition duration-300 group-hover:text-black ease">
-              Get it on Android
-            </span>
-          </button>
+        <div data-aos="fade-up" className="flex justify-center gap-8 mt-6">
+          <a href="#">
+            <img className="h-10" src="/images/android.png" alt="" />
+          </a>
+          <a href="#">
+            <img className="h-10" src="/images/apple.gif" alt="" />
+          </a>
         </div>
       </div>
     </section>

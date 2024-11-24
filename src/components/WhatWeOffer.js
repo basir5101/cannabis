@@ -1,5 +1,12 @@
 import React from "react";
-import { MapPin, CreditCard, Star, ShoppingCart, Shield } from "lucide-react";
+import {
+  MapPin,
+  CreditCard,
+  Star,
+  ShoppingCart,
+  Shield,
+  Bitcoin,
+} from "lucide-react";
 
 const WhatWeOffer = () => {
   const features = [
@@ -15,53 +22,109 @@ const WhatWeOffer = () => {
       icon: CreditCard, // Icon for Bitcoin payment
     },
     {
-      title: "Authentic Reviews & Ratings",
-      description: "Read genuine reviews and browse products before you visit.",
+      title: "Detailed Store Insights",
+      description: "Read reviews and browse products before you visit.",
       icon: Star, // Icon for reviews and ratings
-    },
-    {
-      title: "Comprehensive Product Browsing",
-      description:
-        "Check descriptions, prices, and availability before you go.",
-      icon: ShoppingCart, // Icon for product browsing
-    },
-    {
-      title: "Save with Lightning Network",
-      description:
-        "Save money using the Lightning Network's fast, low-fee Bitcoin transactions.",
-      icon: Shield, // Icon for secure transactions
     },
   ];
   return (
-    <section id="offer" className="p-6 bg-gray-100">
-      <h2
-        data-aos="fade-right"
-        className="text-center lg:text-4xl text-2xl font-semibold mb-4"
-      >
-        Your Ultimate Gateway to Bitcoin-Friendly Cannabis Shopping
-      </h2>
-      <p data-aos-delay={200} data-aos="fade-left" className="text-center mb-8">
-        Our app revolutionizes the way you find and pay at cannabis
-        dispensaries. Enjoy unparalleled convenience and privacy with these
-        benefits:
-      </p>
-      <div className="container mx-auto grid md:grid-cols-3 gap-6">
-        {features.map((feature, index) => (
-          <div
-            data-aos="fade-left"
-            data-aos-delay={300}
-            key={index}
-            className="bg-white border border-secondary rounded-lg shadow-md p-6 flex flex-col items-center"
-          >
-            <feature.icon className="text-secondary w-12 h-12 mb-4" />
-            <h3 className="text-xl font-semibold text-accent mb-2">
-              {feature.title}
-            </h3>
-            <p className="text-gray-600 text-center">{feature.description}</p>
+    <>
+      <section className="py-16 px-4 lg:px-0 bg-gradient-to-b from-gray-700 via-gray-600 to-gray-800">
+        <div className="flex justify-center">
+          <h1 className="text-4xl h-20 mb-6 lg:text-6xl font-bold max-w-[800px] lg:max-w-[1000px] text-center mt-6 text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-purple-300 ">
+            Key Features
+          </h1>
+        </div>
+        <div className="container mx-auto grid md:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <div
+              data-aos="fade-left"
+              data-aos-delay={300}
+              key={index}
+              className="bg-white border rounded-lg shadow-lg p-6 flex flex-col items-center"
+            >
+              <feature.icon className="text-green-500 w-12 h-12 mb-4" />
+              <h3 className="text-xl font-semibold text-accent mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600 text-center">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section id="offer" className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto flex flex-col items-center">
+          {/* Title */}
+          <h2 className="title2 h-32">
+            Your Ultimate Gateway to Bitcoin-Friendly Cannabis Shopping
+          </h2>
+
+          {/* Content */}
+          <p className="text-lg text-gray-700 text-center mb-8 font-semibold ">
+            Our app revolutionizes the way you find and pay at cannabis
+            dispensaries. Enjoy unparalleled convenience and privacy with these
+            benefits:
+          </p>
+
+          <div className="lg:flex justify-center items-center">
+            <div className="">
+              {/* Benefit 1 */}
+              <div className="m-5 shadow-lg rounded-lg border p-6 text-center">
+                <div className="flex justify-center mb-3">
+                  <Bitcoin className="w-10 h-10 text-green-500 mr-4" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Fee-Free Transactions
+                  </h3>
+                  <p className="text-gray-600">
+                    Leverage Bitcoin and the Lightning Network to bypass
+                    traditional payment processing fees.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 2 */}
+              <div className="m-5 shadow-lg rounded-lg border p-6 text-center">
+                <div className="flex justify-center mb-3">
+                  <Shield className="w-10 h-10 text-blue-500 mr-4" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Enhanced Privacy
+                  </h3>
+                  <p className="text-gray-600">
+                    Maintain your financial privacy by paying directly with
+                    Bitcoin.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 3 */}
+              <div className="m-5 border shadow-lg rounded-lg p-6 text-center">
+                <div className="flex justify-center mb-3">
+                  <MapPin className="w-10 h-10 text-purple-500 mr-4" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Quick and Easy Search
+                  </h3>
+                  <p className="text-gray-600">
+                    Find nearby cannabis stores effortlessly with our
+                    user-friendly map and list views.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Screenshot */}
+            <div className="lg:w-1/5">
+              <img src="/images/lightning-network.png" alt="" />
+            </div>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      </section>
+    </>
   );
 };
 

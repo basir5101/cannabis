@@ -6,16 +6,25 @@ html {
   scroll-behavior: smooth;
 }
 
+@layer components {
+  .title {
+    @apply text-4xl h-32 mb-6 lg:text-6xl font-bold max-w-[800px] lg:max-w-[1000px] text-center mt-6 text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-purple-300;
+  }
+  .title2 {
+    @apply text-4xl h-16 mb-6 lg:text-5xl font-bold max-w-[800px] lg:max-w-[1000px] text-center mt-6 text-transparent bg-clip-text bg-gradient-to-r from-green-800 to-purple-800;
+  }
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-primary shadow-lg">
+    <nav className="border-b-2 border-gray-600 shadow-lg absolute top-0 z-10 w-full">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -18,54 +18,7 @@ const Navbar = () => {
             Bitcoin Customers
           </span>
         </div>
-
-        {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
-          <a href="#offer" className="text-white hover:text-secondary">
-            What We Offer
-          </a>
-          <a href="#features" className="text-white hover:text-secondary">
-            Features
-          </a>
-          <a href="#download" className="text-white hover:text-secondary">
-            Download
-          </a>
-        </div>
-
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden">
-          <button
-            onClick={toggleMenu}
-            className="text-white focus:outline-none"
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
       </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-primary">
-          <a
-            href="#features"
-            className="block px-6 py-2 text-white hover:bg-secondary"
-          >
-            Features
-          </a>
-          <a
-            href="#offer"
-            className="block px-6 py-2 text-white hover:bg-secondary"
-          >
-            What We Offer
-          </a>
-          <a
-            href="#download"
-            className="block px-6 py-2 text-white hover:bg-secondary"
-          >
-            Download
-          </a>
-        </div>
-      )}
     </nav>
   );
 };
