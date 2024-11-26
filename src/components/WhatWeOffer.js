@@ -29,13 +29,13 @@ const WhatWeOffer = () => {
   ];
   return (
     <>
-      <section className="py-16 px-4 lg:px-0 bg-gradient-to-b from-gray-700 via-gray-600 to-gray-800">
+      <section className="py-16 px-6 lg:px-0 bg-gradient-to-b from-gray-700 via-gray-600 to-gray-800">
         <div className="flex justify-center">
           <h1 className="text-4xl h-20 mb-6 lg:text-6xl font-bold max-w-[800px] lg:max-w-[1000px] text-center mt-6 text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-purple-300 ">
             Key Features
           </h1>
         </div>
-        <div className="container mx-auto grid md:grid-cols-3 gap-6">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div
               data-aos="fade-left"
@@ -52,7 +52,7 @@ const WhatWeOffer = () => {
           ))}
         </div>
       </section>
-      <section id="offer" className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+      <section id="offer" className="bg-gray-50 py-12 px-6 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto flex flex-col items-center">
           {/* Title */}
           <h2 className="title2 h-32">
@@ -66,7 +66,7 @@ const WhatWeOffer = () => {
             benefits:
           </p>
 
-          <div className="lg:flex justify-center items-center">
+          <div className="lg:flex justify-between items-center">
             <div className="">
               {/* Benefit 1 */}
               <div className="m-5 shadow-lg rounded-lg border p-6 text-center">

@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import "./App.css";
-import DownloadSection from "./components/DownloadSection";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection";

@@ -8,11 +8,11 @@ const HeroSection = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="hero min-h-screen flex items-center justify-center overflow-hidden relative"
+      className="hero px-6 min-h-screen flex items-center justify-center overflow-hidden relative"
     >
       <div className="absolute inset-0 bg-black bg-opacity-80 z-10 w-full"></div>
 
-      <div className="container mx-auto px-6 lg:mt-16 -mt-16 text-center flex flex-col justify-center items-center relative z-20">
+      <div className="max-w-7xl mx-auto lg:mt-16 -mt-16 text-center flex flex-col justify-center items-center relative z-20">
         <h1 data-aos="fade-right" className="title text-white">
           Experience Seamless Cannabis Shopping with Bitcoin
         </h1>

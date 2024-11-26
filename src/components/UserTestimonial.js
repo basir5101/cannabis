@@ -17,16 +17,13 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="relative bg-cover bg-center text-white py-16"
-      style={{
-        backgroundImage: "url('/images/happy-users.jpg')", // Replace with actual path
-      }}
+      className="relative bg-gray-700 text-white py-16 px-6"
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
       {/* Content */}
-      <div className="relative max-w-6xl mx-auto px-6 lg:px-12">
+      <div className="relative max-w-6xl mx-auto  lg:px-12">
         {/* Title */}
         <div className="text-center mb-12">
           <h2 className="text-3xl text-green-300 sm:text-4xl font-bold mb-4">
