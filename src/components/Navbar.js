@@ -20,7 +20,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`bg-gradient-to-tr from-green-900 to-green-800 shadow-md fixed w-full z-50`}
+      className={`bg-gradient-to-tr from-green-900 via-green-700 to-green-800 shadow-md  sticky top-0 w-full z-50`}
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
@@ -29,7 +29,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden lg:flex space-x-6">
           {routes.map((route) => (
             <Link
               key={route.link}
@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
 
         {/* Hamburger Menu for Mobile */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button
             onClick={toggleMenu}
             className="text-white focus:outline-none"
@@ -71,7 +71,7 @@ const Navbar = () => {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } md:hidden bg-gradient-to-r from-green-900 via-green-700 to-green-800 text-white font-semibold py-4 transition-all duration-500 ease-in-out`}
+        } lg:hidden bg-gradient-to-r from-green-900 via-green-700 to-green-800 text-white font-semibold py-4 transition-all duration-500 ease-in-out`}
       >
         {routes.map((route) => (
           <Link

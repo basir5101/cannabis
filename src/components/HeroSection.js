@@ -2,66 +2,56 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <>
-      <section
-        style={{
-          backgroundImage: "url(/images/map-view.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-        }}
-        className="hero min-h-screen flex items-center justify-center"
-      >
-        {/* Overlay */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.8)", // Adjust opacity as needed
-            zIndex: 1,
-            width: "100%",
-          }}
-        ></div>
+    <section
+      style={{
+        backgroundImage: "url(/images/map-view.png)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+      className="hero min-h-screen flex items-center justify-center overflow-hidden relative"
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-80 z-10 w-full"></div>
 
-        {/* Content */}
-        <div
-          className="container mx-auto px-6 lg:mt-16 -mt-16 text-center flex flex-col justify-center items-center"
-          style={{ position: "relative", zIndex: 2 }}
+      <div className="container mx-auto px-6 lg:mt-16 -mt-16 text-center flex flex-col justify-center items-center relative z-20">
+        <h1 data-aos="fade-right" className="title text-white">
+          Experience Seamless Cannabis Shopping with Bitcoin
+        </h1>
+        <p
+          data-aos="fade-left"
+          className="mt-4 text-white max-w-[900px] text-center text-lg font-semibold"
         >
-          <h1 data-aos="fade-right" className="title">
-            Experience Seamless Cannabis Shopping with Bitcoin
-          </h1>
-          <p
-            data-aos="fade-left"
-            className="mt-4 text-white max-w-[900px] text-center text-lg font-semibold"
-          >
-            Discover a hassle-free way to find and shop at cannabis
-            dispensaries. Our app connects you to stores that accept Bitcoin and
-            Lightning Network payments, ensuring privacy and eliminating
-            traditional fees.
-          </p>
-          <div data-aos="fade-up" className="flex justify-center gap-8 mt-6">
-            <a href="#">
-              <img className="h-10" src="/images/android.png" alt="" />
-            </a>
-            <a href="#">
-              <img className="h-10" src="/images/apple.gif" alt="" />
-            </a>
-          </div>
-          <div className="flex justify-center mt-10 items-center">
-            <img className="h-1/2 w-1/4" src="/images/use1.png" alt="" />
+          Discover a hassle-free way to find and shop at cannabis dispensaries.
+          Our app connects you to stores that accept Bitcoin and Lightning
+          Network payments, ensuring privacy and eliminating traditional fees.
+        </p>
+
+        <div data-aos="fade-up" className="flex justify-center gap-8 mt-6">
+          <a href="#">
             <img
-              className="h-1/2 w-1/4 lg:-ml-10"
-              src="/images/use2.png"
-              alt=""
+              className="h-10 w-auto"
+              src="/images/android.png"
+              alt="Android"
             />
-          </div>
+          </a>
+          <a href="#">
+            <img className="h-10 w-auto" src="/images/apple.gif" alt="Apple" />
+          </a>
         </div>
-      </section>
-    </>
+
+        <div className="flex justify-center mt-10 items-center flex-wrap gap-4">
+          <img
+            className="h-auto lg:w-1/4 w-1/3 max-w-[500px] object-contain"
+            src="/images/use1.png"
+            alt="Use 1"
+          />
+          <img
+            className="h-auto lg:w-1/4 w-1/3 max-w-[500px] lg:-ml-10 object-contain"
+            src="/images/use2.png"
+            alt="Use 2"
+          />
+        </div>
+      </div>
+    </section>
   );
 };
 
