@@ -4,25 +4,25 @@ const HowItWorks = () => {
       title: "Search for Stores",
       description:
         "Open the app and use the search bar or map view to find nearby cannabis stores accepting Bitcoin.",
-      image: "/images/product-listings.png", // Replace with actual path
+      image: "/images/search-interface.png", // Replace with actual path
     },
     {
       title: "Explore Store Details",
       description:
         "Tap on a store to view products, reviews, and hours of operation.",
-      image: "/images/listing.png", // Replace with actual path
+      image: "/images/store-detial.png", // Replace with actual path
     },
     {
       title: "Make a Bitcoin Payment",
       description:
         "Select your products and pay using Bitcoin or the Lightning Network for instant, fee-free transactions.",
-      image: "/images/bitcoin-payment.png", // Replace with actual path
+      image: "/images/transaction-conformation.png", // Replace with actual path
     },
     {
       title: "Bitcoin payment screen with confirmation.",
       description:
         "Share your experience by leaving a review and rating the store.",
-      image: "/images/reviews-section.png", // Replace with actual path
+      image: "/images/review-submission.png", // Replace with actual path
     },
   ];
 

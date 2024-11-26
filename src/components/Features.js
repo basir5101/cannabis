@@ -6,38 +6,44 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import {
+  A11y,
+  Autoplay,
+  Navigation,
+  Pagination,
+  Scrollbar,
+} from "swiper/modules";
 
 const features = [
   {
     title: "Interactive Map & List View",
     description:
       "Explore nearby cannabis dispensaries using our interactive map or list view. Access store details, reviews, and operating hours all in one place.",
-    image: "/images/map-view.png", // Replace with actual path
+    image: "/images/multiple-stores.png", // Replace with actual path
   },
   {
     title: "Instant Bitcoin Payments",
     description:
       "Make seamless payments using Bitcoin or the Lightning Network. Experience instant transactions without credit card fees.",
-    image: "/images/bitcoin-payment.png", // Replace with actual path
+    image: "/images/payment-screen.png", // Replace with actual path
   },
   {
     title: "Authentic Reviews & Ratings",
     description:
       "Read genuine reviews and ratings from other users. Share your own experiences to help the community.",
-    image: "/images/reviews-section.png", // Replace with actual path
+    image: "/images/user-review.png", // Replace with actual path
   },
   {
     title: "Comprehensive Product Browsing",
     description:
       "Browse available products at each store. Check descriptions, prices, and availability before you go.",
-    image: "/images/product-listings.png", // Replace with actual path
+    image: "/images/search-interface.png", // Replace with actual path
   },
   {
     title: "Save with Lightning Network",
     description:
       "Save money using the Lightning Network's fast, low-fee Bitcoin transactions.",
-    image: "/images/lightning-network.png", // Replace with actual path
+    image: "/images/cost-saving.png", // Replace with actual path
   },
 ];
 
@@ -53,7 +59,7 @@ const Features = () => {
         </div>
 
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={50}
           slidesPerView={2}
           navigation
@@ -62,10 +68,15 @@ const Features = () => {
             768: { slidesPerView: 2, spaceBetween: 30 },
             1024: { slidesPerView: 2, spaceBetween: 40 },
           }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
+          loop={true}
         >
           {features.map((feature, index) => (
             <SwiperSlide

@@ -118,8 +118,8 @@ const WhatWeOffer = () => {
             </div>
 
             {/* Screenshot */}
-            <div className="lg:w-1/5">
-              <img src="/images/lightning-network.png" alt="" />
+            <div className="lg:w-1/3">
+              <img src="/images/multiple-stores.png" alt="" />
             </div>
           </div>
         </div>

@@ -39,9 +39,9 @@ const DownloadApp = () => {
         {/* Image Section */}
         <div className="lg:w-1/2 flex justify-center">
           <img
-            src="/images/lightning-network.png" // Replace with the actual promotional image path
+            src="/images/showcase.png" // Replace with the actual promotional image path
             alt="App Promo"
-            className="rounded-lg shadow-lg w-1/2 h-auto"
+            className="rounded-lg shadow-lg h-auto"
           />
         </div>
       </div>
