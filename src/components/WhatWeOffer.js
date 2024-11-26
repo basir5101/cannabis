@@ -52,15 +52,18 @@ const WhatWeOffer = () => {
           ))}
         </div>
       </section>
-      <section id="offer" className="bg-gray-50 py-12 px-6 sm:px-6 lg:px-8">
+      <section
+        id="offer"
+        className="bg-gray-900 text-white py-12 px-6 sm:px-6 lg:px-8"
+      >
         <div className="max-w-7xl mx-auto flex flex-col items-center">
           {/* Title */}
-          <h2 className="title2 h-32">
+          <h2 className="title h-32">
             Your Ultimate Gateway to Bitcoin-Friendly Cannabis Shopping
           </h2>
 
           {/* Content */}
-          <p className="text-lg text-gray-700 text-center mb-8 font-semibold ">
+          <p className="text-lg text-gray-50 text-center mb-8 font-semibold ">
             Our app revolutionizes the way you find and pay at cannabis
             dispensaries. Enjoy unparalleled convenience and privacy with these
             benefits:
@@ -74,10 +77,10 @@ const WhatWeOffer = () => {
                   <Bitcoin className="w-10 h-10 text-green-500 mr-4" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-50 mb-2">
                     Fee-Free Transactions
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-100">
                     Leverage Bitcoin and the Lightning Network to bypass
                     traditional payment processing fees.
                   </p>
@@ -90,10 +93,10 @@ const WhatWeOffer = () => {
                   <Shield className="w-10 h-10 text-blue-500 mr-4" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-50 mb-2">
                     Enhanced Privacy
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-100">
                     Maintain your financial privacy by paying directly with
                     Bitcoin.
                   </p>
@@ -106,10 +109,10 @@ const WhatWeOffer = () => {
                   <MapPin className="w-10 h-10 text-purple-500 mr-4" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-50 mb-2">
                     Quick and Easy Search
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-100">
                     Find nearby cannabis stores effortlessly with our
                     user-friendly map and list views.
                   </p>

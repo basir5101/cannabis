@@ -40,12 +40,12 @@ const HeroSection = () => {
 
         <div className="flex justify-center mt-10 items-center flex-wrap gap-4">
           <img
-            className="h-auto lg:w-1/4 w-1/3 max-w-[500px] object-contain"
+            className="h-auto lg:w-1/4 w-1/3 max-w-[500px] object-contain transform transition-transform duration-500 lg:mr-10 rotate-12 hover:rotate-0"
             src="/images/use1.png"
             alt="Use 1"
           />
           <img
-            className="h-auto lg:w-1/4 w-1/3 max-w-[500px] lg:-ml-10 object-contain"
+            className="h-auto lg:w-1/4 w-1/3 max-w-[500px] object-contain transform transition-transform duration-500 -rotate-12 hover:rotate-0"
             src="/images/use2.png"
             alt="Use 2"
           />
