@@ -38,7 +38,7 @@ const WhatWeOffer = () => {
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div
-              data-aos="fade-left"
+              data-aos="fade-bottom"
               data-aos-delay={300}
               key={index}
               className="bg-white border rounded-lg shadow-lg p-6 flex flex-col items-center"
